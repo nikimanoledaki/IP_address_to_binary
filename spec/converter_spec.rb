@@ -7,14 +7,9 @@ describe Converter do
             expect(subject.convert(ip_address)).to eq "01.000.00.0"
         end
 
-        it 'converts 2 into 10' do
-            ip_address = "01.200.00.00"
-            expect(subject.convert(ip_address)).to eq "01.1000.00.00"
-        end
-
-        it 'converts 3 into 10' do
-            ip_address = "01.230.00.00"
-            expect(subject.convert(ip_address)).to eq "01.10110.00.00"
+        it 'converts decimals into binary up to 9' do
+            ip_address = "04.005.03.09"
+            expect(subject.convert(ip_address)).to eq "0100.00101.011.01001"
         end
     end
 end

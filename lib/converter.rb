@@ -22,7 +22,9 @@ class Converter
     end
 
     def dictionary(decimal)
-        dictionary = { "0" => 0, "1" => "1", "2" => "10", "3" => "11" }
+        dictionary = { "0" => 0, "1" => "1", "2" => "10", 
+        "3" => "11", "4" => "100", "5" => "101", "6" => "110",
+        "7" => "111", "8" => "1000", "9" => "1001" }
         dictionary[decimal]
     end
 
