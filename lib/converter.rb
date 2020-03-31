@@ -13,12 +13,17 @@ class Converter
 
     def to_binary(decimals)
         decimals.map do |decimal|
-            if decimal == "2"
-                @results.push("10")
-            else 
+            if dictionary(decimal) != nil
+                @results.push(dictionary(decimal))
+            else
                 @results.push(decimal)
             end
         end
+    end
+
+    def dictionary(decimal)
+        dictionary = { "0" => 0, "1" => "1", "2" => "10", "3" => "11" }
+        dictionary[decimal]
     end
 
     def display
