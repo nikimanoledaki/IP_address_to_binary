@@ -1,6 +1,6 @@
 # IP Address to Binary
 
-This simple algorithm converts an IP Address into a binary code. 
+This simple algorithm converts an IP Address into binary code. 
 It is written in Ruby and fully tested with RSpec.
 
 ## Get started
@@ -16,7 +16,7 @@ $ rspec
 ```
 ## Passing Criteria
 
-convert(74.125.43.99) => 01001010.01111101.00101011.01100011
+convert(74.125.43.99) => 01001010.01111101.00101011.01100011 </b>
 convert(1) => "Error: Please input the correct format"
 
 ## Process
