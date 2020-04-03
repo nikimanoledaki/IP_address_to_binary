@@ -1,7 +1,8 @@
 class Converter 
-    attr_reader :results
+    attr_reader :results, :calculator
 
-    def initialize
+    def initialize(calculator)
+        @calculator = calculator
         @results = []
     end
 
@@ -13,13 +14,13 @@ class Converter
 
     def iterate(fields)
         fields.map do |field|
-            result = calculator(field.to_i)
+            result = calculate(field.to_i)
             @results.push(result)
         end
     end
 
-    def calculator(field, calculator = Calculator.new)
-        calculator.execute(field) 
+    def calculate(field)
+        @calculator.execute(field) 
     end
 
     def display
