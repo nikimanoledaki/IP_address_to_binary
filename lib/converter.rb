@@ -18,9 +18,8 @@ class Converter
         end
     end
 
-    def calculator(field)
-        dictionary = { 1 => 1 }
-        dictionary[field]
+    def calculator(field, calculator = Calculator.new)
+        calculator.execute(field) 
     end
 
     def display
