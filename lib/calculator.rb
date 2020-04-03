@@ -1,6 +1,5 @@
 class Calculator
     def execute(decimal)
-        dictionary = { 1 => 1 }
-        dictionary[decimal]
+        binary = decimal.to_s(2)
     end
 end

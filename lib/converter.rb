@@ -3,19 +3,19 @@ class Converter
 
     def initialize(calculator)
         @calculator = calculator
-        @results = []
+        @temporary = []
     end
 
-    def convert(ip_address)
+    def execute(ip_address)
         fields = ip_address.split('.')
-        iterate(fields)
+        transform(fields)
         display
     end
 
-    def iterate(fields)
+    def transform(fields)
         fields.map do |field|
             result = calculate(field.to_i)
-            @results.push(result)
+            @temporary.push(result)
         end
     end
 
@@ -24,6 +24,7 @@ class Converter
     end
 
     def display
-        @results.join('.')
+        results = @temporary.map { |field| sprintf '%08d', field.to_i }
+        results.join('.')
     end
 end
