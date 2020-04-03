@@ -10,8 +10,4 @@ describe Converter do
             expect(subject.convert(ip_address)).to eq "1.1.1.1"
         end
     end
-
-    # describe '#calculate' do
-    #     it ''
-    # end
 end
