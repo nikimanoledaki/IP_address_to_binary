@@ -16,7 +16,8 @@ $ rspec
 ```
 ## Passing Criteria
 
-convert(74.125.43.99) => 01001010.01111101.00101011.01100011 </b>
+convert(74.125.43.99) => 01001010.01111101.00101011.01100011
+
 convert(1) => "Error: Please input the correct format"
 
 ## Process
